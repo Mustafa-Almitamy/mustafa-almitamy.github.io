@@ -421,6 +421,10 @@ section.animate-in {
 	background-clip: text;
 }
 
+.hero-greeting {
+	color: var(--text-primary);
+}
+
 .hero-subtitle {
 	font-size: var(--font-size-2xl);
 	font-weight: 400;
@@ -778,78 +782,45 @@ section.animate-in {
 .portfolio-item {
 	position: relative;
 	border-radius: var(--border-radius-lg);
-	overflow: hidden;
 	box-shadow: var(--shadow-sm);
 	transition: var(--transition);
 	background: var(--background-white);
+	border: 1px solid var(--border-color);
+	padding: var(--spacing-xl);
 }
 
 .portfolio-item:hover {
 	transform: translateY(-5px);
 	box-shadow: var(--shadow-lg);
+	border-color: var(--accent-primary);
 }
 
-.portfolio-image {
-	position: relative;
-	height: 250px;
-	overflow: hidden;
+.portfolio-content h3 {
+	color: var(--primary-dark);
+	margin-bottom: var(--spacing-md);
+	font-size: var(--font-size-xl);
 }
 
-.portfolio-image img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	transition: var(--transition);
+.portfolio-content p {
+	color: var(--text-muted);
+	line-height: 1.6;
+	margin-bottom: var(--spacing-lg);
 }
 
-.portfolio-item:hover .portfolio-image img {
-	transform: scale(1.05);
-}
-
-.portfolio-overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: linear-gradient(135deg, rgba(79, 70, 229, 0.9) 0%, rgba(6, 182, 212, 0.9) 100%);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	opacity: 0;
-	transition: var(--transition);
-}
-
-.portfolio-overlay.active {
-	opacity: 1;
-}
-
-.portfolio-overlay-content {
-	text-align: center;
-	color: var(--text-primary);
-	padding: var(--spacing-lg);
-}
-
-.portfolio-overlay-content h3 {
+.portfolio-content h3 {
 	color: var(--text-primary);
 	margin-bottom: var(--spacing-sm);
-}
-
-.portfolio-overlay-content p {
-	color: rgba(255, 255, 255, 0.9);
-	margin-bottom: var(--spacing-md);
 }
 
 .project-tags {
 	display: flex;
 	flex-wrap: wrap;
 	gap: var(--spacing-xs);
-	justify-content: center;
 }
 
 .project-tag {
 	padding: var(--spacing-xs) var(--spacing-sm);
-	background: rgba(255, 255, 255, 0.2);
+	background: var(--accent-primary);
 	color: var(--text-primary);
 	border-radius: var(--border-radius);
 	font-size: var(--font-size-xs);
